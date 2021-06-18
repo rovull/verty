@@ -40,7 +40,7 @@ class MetallController extends AbstractController
 
         $data=$request->request->get('data');
         $data=json_decode($data);
-        $repository->dell();
+//        $repository->dell();
         foreach ($data as $rov) {
             $device = new Metall();
             $device->setName($rov->kind);
@@ -49,17 +49,7 @@ class MetallController extends AbstractController
         $om->persist($device);
         $om->flush();
         }
-//        $token = $request->query->get("token_device");
-//
-//        $setting = $request->query->get("setting");
-//
-//        $type=$request->query->get("type");
-//
-//        $device->setName($token);
-//        $device->setPrice($setting);
-//        $device->setVeith($type);
-//        $om->persist($device);
-//        $om->flush();
+
         return $this->json([
             'message' => 'done!',
         ]);
