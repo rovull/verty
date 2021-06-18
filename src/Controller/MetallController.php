@@ -39,7 +39,7 @@ class MetallController extends AbstractController
     {
         $device = new Metall();
         $data=$request->request->get('data');
-        $data=json_decode($data, true);
+        $data=json_decode($data);
 //        $token = $request->query->get("token_device");
 //
 //        $setting = $request->query->get("setting");
