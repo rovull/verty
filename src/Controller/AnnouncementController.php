@@ -231,13 +231,13 @@ class AnnouncementController extends AbstractController
      * @throws \Spatie\PdfToImage\Exceptions\InvalidFormat
      */
     public function allAnnouncement(AnnouncementRepository $repository)
-    {
-        $appeal2 = date('Y-m-d');
-        $allAnnouncement = $repository->findAllpubl($appeal2);
-        $result = array();
-        foreach ($allAnnouncement as $object) {
-            $result[] = (array)$object;
-        }
+    {       $result='top';
+//        $appeal2 = date('Y-m-d');
+//        $allAnnouncement = $repository->findAllpubl($appeal2);
+//        $result = array();
+//        foreach ($allAnnouncement as $object) {
+//            $result[] = (array)$object;
+//        }
         return $this->json(
             $result
         );
