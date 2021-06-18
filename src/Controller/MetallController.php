@@ -40,6 +40,7 @@ class MetallController extends AbstractController
 
         $data=$request->request->get('data');
         $data=json_decode($data);
+        $repository->dell();
         foreach ($data as $rov) {
             $device = new Metall();
             $device->setName($rov->kind);

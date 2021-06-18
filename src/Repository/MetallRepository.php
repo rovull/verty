@@ -46,6 +46,13 @@ class MetallRepository extends ServiceEntityRepository
             ;
 
     }
+    public function dell()
+    {
+        return $this->createQueryBuilder('u')
+            ->delete()
+            ;
+
+    }
 
 
         // /**

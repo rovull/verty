@@ -21,12 +21,12 @@ class Metall
      */
     private $name;
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string")
      */
     private $veith;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string")
      */
     private $price;
 

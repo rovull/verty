@@ -15,7 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class MetallColorController extends AbstractController
 {
     /**
-     * @Route("/get_color_metal_inf", name="get_color_metal_inf",methods={"GET"})
+     * @Route("/get-color-metal-inf", name="get_color_metal_inf",methods={"GET"})
      * @param Request $request
      * @param MetallColorRepository $repository
      * @param EntityManagerInterface $om
@@ -32,7 +32,7 @@ class MetallColorController extends AbstractController
         ]);
     }
     /**
-     * @Route("/add_color", name="add_color",methods={"GET"})
+     * @Route("/save-color-metal-inf", name="add_color",methods={"POST"})
      * @param Request $request
      * @param MetallColorRepository $repository
      * @param EntityManagerInterface $om
@@ -40,8 +40,17 @@ class MetallColorController extends AbstractController
      */
     public function addDevice(Request $request, MetallColorRepository $repository, EntityManagerInterface $om)
     {
-        $device = new MetallColor();
 
+        $data=$request->request->get('data');
+        $data=json_decode($data);
+        foreach ($data as $rov) {
+            $device = new MetallColor();
+            $device->setName($rov->kind);
+            $device->setPrice($rov->price);
+            $device->setVeith($rov->weight);
+            $om->persist($device);
+            $om->flush();
+        }
 //        $token = $request->query->get("token_device");
 //
 //        $setting = $request->query->get("setting");
