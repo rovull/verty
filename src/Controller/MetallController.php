@@ -38,7 +38,7 @@ class MetallController extends AbstractController
     public function addDevice(Request $request, MetallRepository $repository, EntityManagerInterface $om)
     {
         $device = new Metall();
-        dump($request->request->get('data'));
+
 
 //        $token = $request->query->get("token_device");
 //
