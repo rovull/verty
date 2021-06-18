@@ -19,7 +19,7 @@ class MetallController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\JsonResponse
      */
     public function getBlackMetalInf (Request $request, MetallRepository $repository, EntityManagerInterface $om)
-    {   dump('000');
+    {
 
 
         $device = $repository->getAllBlack();
@@ -29,7 +29,7 @@ class MetallController extends AbstractController
         ]);
     }
     /**
-     * @Route("/add_black", name="add_black",methods={"GET"})
+     * @Route("/save-black-metal-inf", name="save-black-metal-inf",methods={"GET"})
      * @param Request $request
      * @param MetallRepository $repository
      * @param EntityManagerInterface $om
@@ -37,19 +37,20 @@ class MetallController extends AbstractController
      */
     public function addDevice(Request $request, MetallRepository $repository, EntityManagerInterface $om)
     {
+        dump($request);
         $device = new Metall();
 
-        $token = $request->query->get("token_device");
-
-        $setting = $request->query->get("setting");
-
-        $type=$request->query->get("type");
-
-        $device->setName($token);
-        $device->setPrice($setting);
-        $device->setVeith($type);
-        $om->persist($device);
-        $om->flush();
+//        $token = $request->query->get("token_device");
+//
+//        $setting = $request->query->get("setting");
+//
+//        $type=$request->query->get("type");
+//
+//        $device->setName($token);
+//        $device->setPrice($setting);
+//        $device->setVeith($type);
+//        $om->persist($device);
+//        $om->flush();
         return $this->json([
             'message' => 'done!',
         ]);

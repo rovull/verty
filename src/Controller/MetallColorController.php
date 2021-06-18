@@ -42,17 +42,17 @@ class MetallColorController extends AbstractController
     {
         $device = new MetallColor();
 
-        $token = $request->query->get("token_device");
-
-        $setting = $request->query->get("setting");
-
-        $type=$request->query->get("type");
-
-        $device->setName($token);
-        $device->setPrice($setting);
-        $device->setVeith($type);
-        $om->persist($device);
-        $om->flush();
+//        $token = $request->query->get("token_device");
+//
+//        $setting = $request->query->get("setting");
+//
+//        $type=$request->query->get("type");
+//
+//        $device->setName($token);
+//        $device->setPrice($setting);
+//        $device->setVeith($type);
+//        $om->persist($device);
+//        $om->flush();
         return $this->json([
             'message' => 'done!',
         ]);
