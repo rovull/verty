@@ -29,7 +29,7 @@ class MetallController extends AbstractController
         ]);
     }
     /**
-     * @Route("/save-black-metal-inf", name="save-black-metal-inf",methods={"GET"})
+     * @Route("/save-black-metal-inf", name="save-black-metal-inf",methods={"POST"})
      * @param Request $request
      * @param MetallRepository $repository
      * @param EntityManagerInterface $om
