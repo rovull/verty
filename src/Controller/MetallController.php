@@ -36,7 +36,7 @@ class MetallController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\JsonResponse
      */
     public function addDevice(Request $request, MetallRepository $repository, EntityManagerInterface $om)
-    {   dump($request);
+    {   
         $device = new Metall();
 
 //        $token = $request->query->get("token_device");
