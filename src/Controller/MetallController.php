@@ -51,7 +51,7 @@ class MetallController extends AbstractController
 //        $device->setVeith($type);
 //        $om->persist($device);
 //        $om->flush();
-        return $this->json([$data[0],
+        return $this->json([$data[0]->price,
             'message' => 'done!',
         ]);
     }
