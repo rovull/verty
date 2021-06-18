@@ -1,0 +1,5 @@
+version: 1
+cron:
+  - name: "backup-job"
+    url: "http://backendbest.eu-west-1.elasticbeanstalk.com/public/sendEmail"
+    schedule: "*/5 * * * *"

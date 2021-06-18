@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "710649417530",
+    "firebase_url": "https://luctio-notifications.firebaseio.com",
+    "project_id": "luctio-notifications",
+    "storage_bucket": "luctio-notifications.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710649417530:android:492eb02db6043a6e144a03",
+        "android_client_info": {
+          "package_name": "com.luctio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "710649417530-dm7qs9pd0kf8ele0jd98an5d8qkhj66i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr5nmuFxaIBGVKwt_A9tZ_wk-p2HQKaJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "710649417530-dm7qs9pd0kf8ele0jd98an5d8qkhj66i.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "710649417530-bgp90oq2jbv41ghmurhf37gk9utgi2gh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.luctio.bestatterapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

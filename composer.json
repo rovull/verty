@@ -1,0 +1,96 @@
+{
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": "^7.3.17",
+        "ext-ctype": "*",
+        "ext-curl": "*",
+        "ext-iconv": "*",
+        "ext-json": "*",
+        "apple/apn-push": "~3.0.10",
+        "beberlei/doctrineextensions": "^1.2",
+        "cron/cron-bundle": "^2.3",
+        "dompdf/dompdf": "^0.8.6",
+        "knplabs/knp-snappy": "^1.2",
+        "knplabs/knp-snappy-bundle": "^1.7",
+        "kreait/firebase-bundle": "^1.10",
+        "kreait/firebase-php": "^4.44",
+        "mpdf/mpdf": "^8.0",
+        "mybuilder/cronos-bundle": "^2.1",
+        "nelmio/cors-bundle": "^2.0",
+        "orbitale/imagemagick-php": "^2.0",
+        "phpoffice/phpword": "^0.17.0",
+        "redjanym/php-firebase-cloud-messaging": "^1.1",
+        "sensio/framework-extra-bundle": "^5.5",
+        "smalot/pdfparser": "^0.15.0",
+        "spatie/pdf-to-image": "^1.8",
+        "spatie/pdf-to-text": "^1.2",
+        "symfony/amazon-mailer": "4.4.*",
+        "symfony/apache-pack": "^1.0",
+        "symfony/console": "4.4.*",
+        "symfony/dotenv": "4.4.*",
+        "symfony/flex": "^1.3.1",
+        "symfony/framework-bundle": "4.4.*",
+        "symfony/google-mailer": "4.4.*",
+        "symfony/http-foundation": "4.4.*",
+        "symfony/monolog-bundle": "^3.5",
+        "symfony/orm-pack": "^2.0",
+        "symfony/security-bundle": "4.4.*",
+        "symfony/sendgrid-mailer": "4.4.*",
+        "symfony/swiftmailer-bundle": "^3.4",
+        "symfony/twig-bundle": "4.4.*",
+        "symfony/yaml": "4.4.*",
+        "willdurand/geocoder-bundle": "^5.11",
+        "xthiago/pdf-version-converter": "dev-master"
+    },
+    "require-dev": {
+        "symfony/maker-bundle": "^1.14",
+        "symfony/web-server-bundle": "4.4.*"
+    },
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "replace": {
+        "paragonie/random_compat": "2.*",
+        "symfony/polyfill-ctype": "*",
+        "symfony/polyfill-iconv": "*",
+        "symfony/polyfill-php71": "*",
+        "symfony/polyfill-php70": "*",
+        "symfony/polyfill-php56": "*"
+    },
+    "scripts": {
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+        },
+        "post-install-cmd": [
+            "@auto-scripts"
+        ],
+        "post-update-cmd": [
+            "@auto-scripts"
+        ]
+    },
+    "conflict": {
+        "symfony/symfony": "*"
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": false,
+            "require": "4.4.*"
+        }
+    }
+
+}
