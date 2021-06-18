@@ -12,7 +12,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class MetallController extends AbstractController
 {
     /**
-     * @Route("/get_black_metal_inf", name="getblackmetalinf",methods={"GET"})
+     * @Route("/get-black-metal-inf", name="getblackmetalinf",methods={"GET"})
      * @param Request $request
      * @param MetallRepository $repository
      * @param EntityManagerInterface $om
