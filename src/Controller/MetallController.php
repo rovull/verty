@@ -36,7 +36,7 @@ class MetallController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\JsonResponse
      */
     public function addDevice(Request $request, MetallRepository $repository, EntityManagerInterface $om)
-    {   
+    {
         $device = new Metall();
 
 //        $token = $request->query->get("token_device");
@@ -50,7 +50,7 @@ class MetallController extends AbstractController
 //        $device->setVeith($type);
 //        $om->persist($device);
 //        $om->flush();
-        return $this->json([$request,
+        return $this->json([$request->request,
             'message' => 'done!',
         ]);
     }
