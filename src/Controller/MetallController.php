@@ -29,7 +29,7 @@ class MetallController extends AbstractController
         ]);
     }
     /**
-     * @Route("/save-black-metal-inf", name="save-black-metal-inf",methods={"POST"})
+     * @Route("/save-black-metal-inf", name="saveblackmetalinf",methods={"POST"})
      * @param Request $request
      * @param MetallRepository $repository
      * @param EntityManagerInterface $om
@@ -37,7 +37,7 @@ class MetallController extends AbstractController
      */
     public function addDevice(Request $request, MetallRepository $repository, EntityManagerInterface $om)
     {
-        dump($request);
+
         $device = new Metall();
 
 //        $token = $request->query->get("token_device");
