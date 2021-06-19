@@ -21,17 +21,10 @@ class MetallColorRepository extends ServiceEntityRepository
     }
     public function getAllColor()
     {
-
-        $conn = $this->getEntityManager()
-            ->getConnection();
-        $sql='SELECT * FROM metallcolor';
-
-        try {
-            $stmt = $conn->prepare($sql);
-        } catch (DBALException $e) {
-        }
-
-        return $stmt->fetchAll();
+        return $this->createQueryBuilder('u')
+            ->getQuery()
+            ->getResult()
+            ;
     }
     public function deleteAll(): int
     {
