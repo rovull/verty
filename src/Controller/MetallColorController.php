@@ -6,7 +6,7 @@ namespace App\Controller;
 
 use App\Entity\MetallColor;
 use App\Repository\MetallColorRepository;
-use App\Repository\MetallRepository;
+
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,7 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class MetallColorController extends AbstractController
 {
     /**
-     * @Route("/get-color-metal-inf", name="get_color_metal_inf",methods={"GET"})
+     * @Route("/get-color-metal-inf", name="getcolormetalinf",methods={"GET"})
      * @param Request $request
      * @param MetallColorRepository $repository
      * @param EntityManagerInterface $om
@@ -32,7 +32,7 @@ class MetallColorController extends AbstractController
         ]);
     }
     /**
-     * @Route("/save-color-metal-inf", name="save-color-metal-inf",methods={"POST"})
+     * @Route("/save-color-metal-inf", name="savecolormetalinf",methods={"POST"})
      * @param Request $request
      * @param MetallColorRepository $repository
      * @param EntityManagerInterface $om
@@ -64,7 +64,7 @@ class MetallColorController extends AbstractController
      * @param EntityManagerInterface $om
      * @return \Symfony\Component\HttpFoundation\JsonResponse
      */
-    public function getDell (Request $request, MetallColorRepository $repository, EntityManagerInterface $om)
+    public function getDell(Request $request, MetallColorRepository $repository, EntityManagerInterface $om)
     {
 
 

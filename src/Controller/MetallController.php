@@ -35,7 +35,7 @@ class MetallController extends AbstractController
      * @param EntityManagerInterface $om
      * @return \Symfony\Component\HttpFoundation\JsonResponse
      */
-    public function addDevice(Request $request, MetallRepository $repository, EntityManagerInterface $om)
+    public function addDevi(Request $request, MetallRepository $repository, EntityManagerInterface $om)
     {
 
         $data=$request->request->get('data');
@@ -62,7 +62,7 @@ class MetallController extends AbstractController
      * @param EntityManagerInterface $om
      * @return \Symfony\Component\HttpFoundation\JsonResponse
      */
-    public function getDell (Request $request, MetallRepository $repository, EntityManagerInterface $om)
+    public function getDell(Request $request, MetallRepository $repository, EntityManagerInterface $om)
     {
 
 
