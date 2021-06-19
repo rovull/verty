@@ -50,7 +50,7 @@ class MetallController extends AbstractController
         $om->flush();
         }
 
-        return $this->json([$data,
+        return $this->json([
             'message' => 'done!',
         ]);
     }
