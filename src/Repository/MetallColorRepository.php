@@ -24,7 +24,7 @@ class MetallColorRepository extends ServiceEntityRepository
 
         $conn = $this->getEntityManager()
             ->getConnection();
-        $sql='SELECT * FROM metall_color        ';
+        $sql='SELECT * FROM metallcolor';
 
         try {
             $stmt = $conn->prepare($sql);
