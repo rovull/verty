@@ -45,7 +45,7 @@ class MetallController extends AbstractController
 //            $device = new Metall();
 //            $device->setName($rov->name);
 //            $device->setPrice($rov->price);
-//            $device->setVeith($rov->veight);
+//            $device->setVeith($rov->veith);
 //        $om->persist($device);
 //        $om->flush();
 //        }
