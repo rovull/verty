@@ -46,9 +46,9 @@ class MetallColorController extends AbstractController
         $repository->dell();
         foreach ($data as $rov) {
             $device = new MetallColor();
-            $device->setName($rov->kind);
+            $device->setName($rov->name);
             $device->setPrice($rov->price);
-            $device->setVeith($rov->weight);
+            $device->setVeith($rov->veight);
             $om->persist($device);
             $om->flush();
         }
