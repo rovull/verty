@@ -38,7 +38,7 @@ class MetallColorController extends AbstractController
      * @param EntityManagerInterface $om
      * @return \Symfony\Component\HttpFoundation\JsonResponse
      */
-    public function saveСolor(Request $request, MetallColorRepository $repository, EntityManagerInterface $om)
+    public function addDevice(Request $request, MetallColorRepository $repository, EntityManagerInterface $om)
     {
 
         $data=$request->request->get('data');
