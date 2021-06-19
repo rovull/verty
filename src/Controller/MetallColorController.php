@@ -52,7 +52,7 @@ class MetallColorController extends AbstractController
             $om->persist($device);
             $om->flush();
         }
-        return $this->json([
+        return $this->json([$data,
             'message' => 'done!',
         ]);
     }
