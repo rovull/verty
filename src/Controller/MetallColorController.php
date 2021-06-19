@@ -43,7 +43,7 @@ class MetallColorController extends AbstractController
 
         $data=$request->request->get('data');
         $data=json_decode($data);
-        $repository->deleteAll();
+
         foreach ($data as $rov) {
             $device = new MetallColor();
             $device->setName($rov->name);
@@ -57,5 +57,21 @@ class MetallColorController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/dell-color", name="getbl",methods={"GET"})
+     * @param Request $request
+     * @param MetallColorRepository $repository
+     * @param EntityManagerInterface $om
+     * @return \Symfony\Component\HttpFoundation\JsonResponse
+     */
+    public function getDell (Request $request, MetallColorRepository $repository, EntityManagerInterface $om)
+    {
 
+
+        $device = $repository->deleteAll();
+
+        return $this->json([$device,
+            'message' => 'done!',
+        ]);
+    }
 }
