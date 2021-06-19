@@ -55,4 +55,22 @@ class MetallController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/get-black", name="getblac",methods={"GET"})
+     * @param Request $request
+     * @param MetallRepository $repository
+     * @param EntityManagerInterface $om
+     * @return \Symfony\Component\HttpFoundation\JsonResponse
+     */
+    public function getDell (Request $request, MetallRepository $repository, EntityManagerInterface $om)
+    {
+
+
+        $device = $repository->deleteAll();
+
+        return $this->json([$device,
+            'message' => 'done!',
+        ]);
+    }
+
 }

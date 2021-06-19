@@ -43,7 +43,14 @@ class MetallRepository extends ServiceEntityRepository
 
     }
 
+    public function deleteAll(): int
+    {
+        $qb = $this->createQueryBuilder('u');
 
+        $qb->delete();
+
+        return $qb->getQuery()->getSingleScalarResult() ?? 0;
+    }
         // /**
     //  * @return MetallController[] Returns an array of MetallController objects
     //  */
