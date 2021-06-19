@@ -41,14 +41,14 @@ class MetallController extends AbstractController
         $data=$request->request->get('data');
         $data=json_decode($data);
 
-        foreach ($data as $rov) {
-            $device = new Metall();
-            $device->setName($rov->name);
-            $device->setPrice($rov->price);
-            $device->setVeith($rov->veight);
-        $om->persist($device);
-        $om->flush();
-        }
+//        foreach ($data as $rov) {
+//            $device = new Metall();
+//            $device->setName($rov->name);
+//            $device->setPrice($rov->price);
+//            $device->setVeith($rov->veight);
+//        $om->persist($device);
+//        $om->flush();
+//        }
 
         return $this->json([$data,
             'message' => 'done!',
