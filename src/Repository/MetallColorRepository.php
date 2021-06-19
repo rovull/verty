@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\MetallColor;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\DBAL\DBALException;
+use Doctrine\Migrations\Query\Query;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -23,7 +24,7 @@ class MetallColorRepository extends ServiceEntityRepository
     {
         return $this->createQueryBuilder('u')
             ->getQuery()
-            ->getResult()
+            ->getArrayResult()
             ;
     }
     public function deleteAll(): int
