@@ -43,7 +43,7 @@ class MetallColorController extends AbstractController
 
         $data=$request->request->get('data');
         $data=json_decode($data);
-        $repository->dell();
+        $repository->deleteAll();
         foreach ($data as $rov) {
             $device = new MetallColor();
             $device->setName($rov->name);

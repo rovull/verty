@@ -33,12 +33,13 @@ class MetallColorRepository extends ServiceEntityRepository
 
         return $stmt->fetchAll();
     }
-    public function dell()
+    public function deleteAll(): int
     {
-        return $this->createQueryBuilder('u')
-            ->delete()
-            ;
+        $qb = $this->createQueryBuilder('u');
 
+        $qb->delete();
+
+        return $qb->getQuery()->getSingleScalarResult() ?? 0;
     }
     // /**
     //  * @return MetallColor[] Returns an array of MetallColor objects
