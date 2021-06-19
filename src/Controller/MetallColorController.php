@@ -32,17 +32,18 @@ class MetallColorController extends AbstractController
         ]);
     }
     /**
-     * @Route("/save-color-metal-inf", name="add_color",methods={"POST"})
+     * @Route("/save-color-metal-inf", name="save-color-metal-inf",methods={"POST"})
      * @param Request $request
      * @param MetallColorRepository $repository
      * @param EntityManagerInterface $om
      * @return \Symfony\Component\HttpFoundation\JsonResponse
      */
-    public function addDevice(Request $request, MetallColorRepository $repository, EntityManagerInterface $om)
+    public function saveСolor(Request $request, MetallColorRepository $repository, EntityManagerInterface $om)
     {
 
         $data=$request->request->get('data');
         $data=json_decode($data);
+        $repository->dell();
         foreach ($data as $rov) {
             $device = new MetallColor();
             $device->setName($rov->kind);
@@ -51,17 +52,6 @@ class MetallColorController extends AbstractController
             $om->persist($device);
             $om->flush();
         }
-//        $token = $request->query->get("token_device");
-//
-//        $setting = $request->query->get("setting");
-//
-//        $type=$request->query->get("type");
-//
-//        $device->setName($token);
-//        $device->setPrice($setting);
-//        $device->setVeith($type);
-//        $om->persist($device);
-//        $om->flush();
         return $this->json([
             'message' => 'done!',
         ]);

@@ -33,19 +33,8 @@ class MetallRepository extends ServiceEntityRepository
         $stmt->execute();
         return $stmt->fetchAll();
     }
-    public function setAllTokenNow()
-    {
-        return $this->createQueryBuilder('u')
-            ->update()
-            ->set('u.paid', '?1')
-            ->setParameter(1, $paht)
-            ->where('u.id = ?2')
-            ->setParameter(2, $id)
-            ->getQuery()
-            ->getSingleScalarResult()
-            ;
 
-    }
+
     public function dell()
     {
         return $this->createQueryBuilder('u')
